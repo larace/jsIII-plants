@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Recommendation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Plant Recommendation Quiz</h1>
+    <form id="plantForm">
+      <label>
+        Where will you place your plant?
+        <input type="radio" name="plantPlacement" value="inside-indirect" required>Inside with some indirect light
+        <input type="radio" name="plantPlacement" value="inside-direct">Inside with a lot of indirect light
+        <input type="radio" name="plantPlacement" value="outside">Outside
+      </label>
+
+      <label>
+        Will it receive direct sunlight?
+        <input type="radio" name="receiveDirectSunlight" value="yes" required>Yes
+        <input type="radio" name="receiveDirectSunlight" value="no">No
+      </label>
+
+      <label>
+        Do you have pets (cats or dogs)?
+        <input type="radio" name="hasPets" value="yes" required>Yes
+        <input type="radio" name="hasPets" value="no">No
+      </label>
+
+      <label>
+        Do you tend to overwater or underwater?
+        <input type="radio" name="wateringHabits" value="overwater" required>Overwater
+        <input type="radio" name="wateringHabits" value="underwater">Underwater
+        <input type="radio" name="wateringHabits" value="neither">Neither / I don’t know
+      </label>
+
+      <label>
+        How do you define your style?
+        <input type="radio" name="stylePreference" value="minimalism" required>I like minimalism and material colors
+        <input type="radio" name="stylePreference" value="simple">I like some decoration and simple colors
+        <input type="radio" name="stylePreference" value="colorful">I like a lot of decoration and bright colors
+      </label>
+
+      <label>
+        Do you want to add any extra elements to your plant?
+        <input type="checkbox" name="extraElements" value="moss-pole">Moss pole
+        <input type="checkbox" name="extraElements" value="pebbles">Pebbles
+        <input type="checkbox" name="extraElements" value="smaller-plants">Smaller plants
+      </label>
+
+      <div class="form-buttons">
+        <button type="submit" class="get-plant-button">Get your plant!</button>
+        <button type="button" class="clear-button">Clear</button>
+      </div>
+    </form>
+    <div id="recommendations"></div>
+    <div id="plantCard" class="hidden">
+      <!-- Información de la ficha de planta -->
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
+
+
+

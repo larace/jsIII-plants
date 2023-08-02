@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilos para la ficha de planta */
+#plantCard {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#plantCard img {
+  max-width: 100%;
+}
+
+/* ... (Agregar estilos adicionales si es necesario) ... */
