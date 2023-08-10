@@ -6,5 +6,10 @@
     "env": {
       "browser": true,
       "es2021": true
+    },
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"]
+
     }
   }
