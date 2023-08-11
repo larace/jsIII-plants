@@ -27,12 +27,6 @@ export  function showCustomization(customization) {
         customizationPreview.innerHTML = `
           <h2>Your Customized Plant</h2>
           <div class="plant-composition">
-          <img src="${imagesPath}${customization.pot.material.toLowerCase()}-${customization.pot.decorations ? 'decorated-' : ''}${customization.pot.color.toLowerCase()}.png" alt="Pot">
-          ${customization.extras.includes("Pebbles") ? `<img src="${imagesPath}pebbles.png" alt="Pebbles">` : ''}
-          ${customization.extras.includes("Smaller plants") ? `<img src="${imagesPath}mini-plants.png" alt="Mini Plants">` : ''}
-          ${customization.extras.includes("Moss pole") ? `<img src="${imagesPath}moss-pole.png" alt="Moss Pole">` : ''}
-          <img src="${imagesPath}${customization.soilType.split(' ').reverse().join('-').toLowerCase()}.png" alt="Soil">
-          <img src="${imagesPath}plant-${customization.plantType.replace(/\s/g, '-').toLowerCase()}.png" alt="Plant">
           </div>
           <p><strong>Name:</strong> ${capitalizeFirstLetter(customization.plantType)}</p>
           <p><strong>Soil:</strong> ${customization.soilType}</p>
