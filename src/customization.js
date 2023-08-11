@@ -50,21 +50,31 @@ document.addEventListener('DOMContentLoaded', () => {
       // Aquí puedes realizar acciones adicionales, como guardar la personalización en el almacenamiento local
     });
 
+    const potDecorationsCheckbox = document.querySelector('input[name="potDecorations"]');
+  
+    // Escuchar cambios en el checkbox de decoraciones de la maceta
+    potDecorationsCheckbox.addEventListener('change', () => {
+      updateCustomizationPreview();
+    });
+
     customizationForm.addEventListener('change', () => {
       // Obtener los valores del formulario
       const potMaterial = document.querySelector('input[name="potMaterial"]:checked').value;
-      const potDecorations = document.querySelector('input[name="potDecorations"]').checked;
+      const potDecorations = document.querySelector('input[name="potDecorations"]').checked ;
       const potColorToggleValue = document.querySelector('input[name="potColorToggle"]').checked;
       const potColor = potColorToggleValue ? document.querySelector('input[name="potColor"]:checked').value : 'unpainted';
       const plantType = document.querySelector('select[name="plantType"]').value;
       const soilType = document.querySelector('input[name="soilType"]:checked').value;
       const extrasArray = Array.from(document.querySelectorAll('input[name="extras"]:checked')).map(input => input.value);
   
+      potDecorationsCheckbox.addEventListener('change', () => {
+        updateCustomizationPreview();
+      });
       // Construir el objeto de personalización
       const customization = {
         pot: {
           material: potMaterial,
-          decorations: potDecorations,
+          decorations: potDecorations ,
           color: potColor
         },
         plantType: plantType,
@@ -72,7 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         extras: extrasArray
       };
   
-      // Mostrar el preview de personalización
+      function updateCustomizationPreview() {
+        const customization = getCustomizationFromForm();
+        customizationObserver.notifyObservers(customization);
+      }
       showCustomization(customization);
     });
   });

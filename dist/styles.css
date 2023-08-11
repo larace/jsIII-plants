@@ -57,4 +57,21 @@ button {
   max-width: 100%;
 }
 
-/* ... (Agregar estilos adicionales si es necesario) ... */
+#customization-preview {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.plant-composition img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+/* Estilos para el título */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
