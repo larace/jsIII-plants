@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function showPlantCard(plant) {
-    const imagesPath = "Assets/"; // Ruta de la carpeta que contiene las imágenes
+    const imagesPath = "Assets/";
+   // Ruta de la carpeta que contiene las imágenes
     const plantCardHTML = `
       <h2>${plant.name}</h2>
       <div class="plant-composition">
@@ -63,12 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
       <p><strong>Pot:</strong> ${plant.pot.style} ${plant.pot.material} (${plant.pot.color})</p>
       <p><strong>Extras:</strong> ${plant.extras.join(', ')}</p>
     `;
-  
-    plantCard.innerHTML += plantCardHTML;
+    const customizeButton = document.createElement('button');
+    customizeButton.textContent = 'Customize';
+    customizeButton.classList.add('customize-button');
+    customizeButton.addEventListener('click', () => {
+      localStorage.setItem('plantRecommendation', JSON.stringify(plantRecommendation));
+      window.location.href = 'customization.html'; // Cambia la URL a la correcta
+    });
+
+    plantCard.innerHTML = plantCardHTML;
+    plantCard.appendChild(customizeButton);
     plantCard.classList.remove('hidden');
   }
   
-
   // Funciones para obtener la información correspondiente a las respuestas del formulario
   function getPlantName(placement, hasPets) {
     if (placement === 'inside-indirect') {

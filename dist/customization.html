@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Plant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Customize Your Plant</h1>
+  <form id="customizationForm">
+    <!-- Choose your pot -->
+    <label>
+      Choose your pot:
+      <input type="radio" name="potMaterial" value="Clay" required> Clay
+      <input type="radio" name="potMaterial" value="Ceramic"> Ceramic
+    </label>
+    <br>
+    <!-- Pot decorations (toggle) -->
+    <label>
+      Pot decorations:
+      <input type="checkbox" name="potDecorations" value="yes"> Yes
+      <input type="checkbox" name="potDecorations" value="no">No
+    </label>
+    <br>
+    <!-- Pot color (toggle) -->
+    <label>
+      Pot color:
+      <input type="checkbox" name="potColorToggle" id="potColorToggle"> Yes
+      <input type="checkbox" name="potColorToggle" value="unpainted"> No
+    </label>
+    <div id="potColorOptions" style="display: none;">
+      <input type="radio" name="potColor" value="Blue"> Blue
+      <input type="radio" name="potColor" value="Pink"> Pink
+      <input type="radio" name="potColor" value="Green"> Green
+      <input type="radio" name="potColor" value="Purple"> Purple
+    </div>
+    <br>
+    <!-- Choose your plant (dropdown) -->
+    <label>
+      Choose your plant:
+      <select name="plantType">
+        <option value="Aglaonema">Aglaonema Silver Bay</option>
+        <option value="Aloe Vera">Aloe Vera</option>
+        <option value="Boston Fern">Boston Fern</option>
+        <option value="Cactus">Cactus</option>
+        <option value="Monstera Deliciosa">Monstera Deliciosa</option>
+        <option value="Peace Lily">Peace Lily</option>
+        <option value="Sansevieria">Sansevieria</option>
+      </select>
+    </label>
+    <br>
+    <!-- Choose your soil -->
+    <label>
+      Choose your soil:
+      <input type="radio" name="soilType" value="composted" required> Basic composted soil
+      <input type="radio" name="soilType" value="fertilized"> Premium fertilized soil
+      <input type="radio" name="soilType" value="drainage"> Easy drainage soil
+    </label>
+    <br>
+    <!-- Choose your extras -->
+    <label>
+      Choose your extras:
+      <input type="checkbox" name="extras" value="Moss pole"> Moss pole
+      <input type="checkbox" name="extras" value="Pebbles"> Pebbles
+      <input type="checkbox" name="extras" value="Smaller plants"> Smaller plants
+    </label>
+    <br>
+    <button type="submit">Customize Plant</button>
+  </form>
+  <div id="customization-preview" class="plant-card"></div>
+  <script src="./bundle/customize.bundle.js"></script>
+</body>
+
+</html>
