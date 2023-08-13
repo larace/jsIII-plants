@@ -38,24 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     customizationObserver.subscribe(previewObserver);
     customizationObserver.subscribe(textObserver);
   
-    customizationForm.addEventListener('change', () => {
-      const customization = getCustomizationFromForm();
-      customizationObserver.notifyObservers(customization);
-    });
-  
-    customizationForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const customization = getCustomizationFromForm();
-      customizationObserver.notifyObservers(customization);
-      // Aquí puedes realizar acciones adicionales, como guardar la personalización en el almacenamiento local
-    });
-
-    const potDecorationsCheckbox = document.querySelector('input[name="potDecorations"]');
-  
     // Escuchar cambios en el checkbox de decoraciones de la maceta
-    potDecorationsCheckbox.addEventListener('change', () => {
-      updateCustomizationPreview();
-    });
+
 
     customizationForm.addEventListener('change', () => {
       // Obtener los valores del formulario
@@ -67,9 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const soilType = document.querySelector('input[name="soilType"]:checked').value;
       const extrasArray = Array.from(document.querySelectorAll('input[name="extras"]:checked')).map(input => input.value);
   
-      potDecorationsCheckbox.addEventListener('change', () => {
-        updateCustomizationPreview();
-      });
       // Construir el objeto de personalización
       const customization = {
         pot: {
@@ -80,12 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
         plantType: plantType,
         soilType: soilType,
         extras: extrasArray
-      };
-  
-      function updateCustomizationPreview() {
-        const customization = getCustomizationFromForm();
-        customizationObserver.notifyObservers(customization);
-      }
+      };;
+
+      localStorage.setItem('orderDetails', JSON.stringify(customization).toLowerCase())
       showCustomization(customization);
+      const checkStoreAvailabilityButton = document.getElementById('checkStoreAvailabilityButton');
+      checkStoreAvailabilityButton.addEventListener('click', () => {
+        // Redirigir al usuario al view de producto (reemplaza 'product-view.html' con la ruta correcta)
+        window.location.href = 'details.html';
+      });
     });
   });

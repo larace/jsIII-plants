@@ -75,3 +75,87 @@ h1 {
   margin-top: 20px;
 }
 
+.preview-images img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de detalles de producto y orden */
+.product-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.order-information {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos de botones de personalización */
+.store-availability-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos de botones de vuelta a personalización */
+.back-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos de formulario de personalización */
+#customizationForm {
+  margin-top: 20px;
+}
+
+.inventory-alert {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inventory-alert p {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.in-stock {
+  color: #27ae60; /* Verde */
+}
+
+.low-inventory {
+  color: #f39c12; /* Amarillo */
+}
+
+.out-of-stock {
+  color: #e74c3c; /* Rojo */
+}
+
+.accordion {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.accordion-header {
+  color: black;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+

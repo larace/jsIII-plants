@@ -28,7 +28,7 @@ export  function showCustomization(customization) {
           <h2>Your Customized Plant</h2>
           <div class="plant-composition">
           </div>
-          <p><strong>Name:</strong> ${capitalizeFirstLetter(customization.plantType)}</p>
+          <p><strong>Name:</strong> ${(customization.plantType)}</p>
           <p><strong>Soil:</strong> ${customization.soilType}</p>
           <p><strong>Pot:</strong> ${getPotDescription(customization.pot)}</p>
           <p><strong>Extras:</strong> ${customization.extras.join(', ')}</p>
@@ -45,9 +45,6 @@ export  function showCustomization(customization) {
         `;
       }
   
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
   
   function getPotDescription(pot) {
     let description = `${pot.material.toLowerCase()} pot`;

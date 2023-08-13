@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product View</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Product Details</h1>
+    <div id="productDetails" class="product-details">
+      <!-- Los detalles del producto se mostrarán aquí -->
+    </div>
+  </div>
+  <div class="inventory-alert">
+    <!-- Las alertas de inventario se mostrarán aquí -->
+  </div>
+  <div class="accordion">
+    <button class="accordion-header">Price breakdown</button>
+    <div class="accordion-content">
+      <div class="price-breakdown">
+        <h3>Price Breakdown</h3>
+        <ul id="priceList">
+          <!-- Los elementos del desglose de precios se mostrarán aquí -->
+        </ul>
+        <p class="total-price"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <button class="accordion-header">Inventory Alerts</button>
+    <div class="accordion-content">
+      <!-- Contenido del acordeón "Inventory Alerts" -->
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <button class="accordion-header">Plant description</button>
+    <div class="accordion-content">
+      <!-- Contenido del acordeón "Plant description" -->
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <button class="accordion-header">Caring tips</button>
+    <div class="accordion-content">
+      <!-- Contenido del acordeón "Caring tips" -->
+    </div>
+  </div>
+  <div class="order-button-container">
+    <button id="orderNowButton" class="button" disabled>Order now!</button>
+  </div>
+  <div class="back-button-container">
+    <button id="backToCustomizationButton" class="back-button">Back to Customization</button>
+  </div>
+  <script src="./bundle/details.bundle.js"></script>
+</body>
+
+</html>
